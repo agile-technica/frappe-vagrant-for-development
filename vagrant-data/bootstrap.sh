@@ -271,7 +271,7 @@ alias python=python3
 alias pip=pip3
 
 sudo apt-get install redis-server -y
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 virtualenv -q env -p /usr/bin/python3
