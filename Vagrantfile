@@ -72,6 +72,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      vb.customize ["modifyvm", :id, "--cpus", "2"]
      vb.customize ["modifyvm", :id, "--ioapic", "on"]
      vb.customize ["modifyvm", :id, "--nictype1", "virtio"]  
+     vb.customize ["modifyvm", :id, "--uart1", "0x3F8", "4"]
+     vb.customize ["modifyvm", :id, "--uartmode1", "file", File::NULL]
   end
 
   config.vm.provision "shell", path: "vagrant-data/bootstrap.sh", privileged: false
